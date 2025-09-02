@@ -1,0 +1,35 @@
+# === Terraform ===
+.terraform/
+*.tfstate
+*.tfstate.*
+terraform.tfstate*
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# === Local environment files ===
+*.tfvars
+*.tfvars.json
+terraform.tfvars
+terraform.tfvars.json
+.env
+*.env
+
+# === IDE & OS ===
+.vscode/
+.idea/
+*.swp
+*.swo
+*.DS_Store
+Thumbs.db
+
+# === Azure specific ===
+# Prevent local auth files from leaking
+.azure/
+*.azureauth
+
+# === Logs ===
+*.log
