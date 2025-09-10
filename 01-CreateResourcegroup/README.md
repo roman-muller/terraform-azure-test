@@ -76,7 +76,3 @@ resource "azurerm_resource_group" "example" {
 terraform destroy
 ```
 
-## Tips
-
-- Keep `terraform.tfstate` out of source control; consider a remote backend for teams.
-- Provider is pinned to `~> 4.0` in `providers.tf`. Update deliberately if you need newer features.
