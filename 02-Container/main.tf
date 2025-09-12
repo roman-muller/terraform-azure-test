@@ -31,8 +31,8 @@ resource "azurerm_container_group" "demo" {
   container {
     name   = "hello-world"
     image  = "mcr.microsoft.com/azuredocs/aci-helloworld"
-    cpu    = "0.5"
-    memory = "1.5"
+    cpu    = 2
+    memory = 4
 
     ports {
       port     = var.http_port
