@@ -28,3 +28,9 @@ locals {
     environment = var.environment
   }
 }
+
+variable "http_port" {
+  type        = number
+  description = "Container HTTP port (set via terraform.tfvars)"
+  default     = 80
+}

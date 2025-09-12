@@ -35,7 +35,7 @@ resource "azurerm_container_group" "demo" {
     memory = "1.5"
 
     ports {
-      port     = 80
+      port     = var.http_port
       protocol = "TCP"
     }
   }
