@@ -21,16 +21,22 @@ variable "environment" {
   default     = "d" # dev
 }
 
+variable "container_cpu" {
+  description = "CPU cores for the container"
+  type        = number
+  default     = 2
+}
+
+variable "container_memory" {
+  description = "Memory (GB) for the container"
+  type        = number
+  default     = 4
+}
+
 locals {
   common_tags = {
     oe          = var.oe
     ritaid      = var.ritaid
     environment = var.environment
   }
-}
-
-variable "http_port" {
-  type        = number
-  description = "Container HTTP port (set via terraform.tfvars)"
-  default     = 80
 }

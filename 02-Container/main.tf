@@ -31,11 +31,11 @@ resource "azurerm_container_group" "demo" {
   container {
     name   = "hello-world"
     image  = "mcr.microsoft.com/azuredocs/aci-helloworld"
-    cpu    = 2
-    memory = 4
+    cpu    = var.container_cpu
+    memory = var.container_memory
 
     ports {
-      port     = var.http_port
+      port     = 80
       protocol = "TCP"
     }
   }
