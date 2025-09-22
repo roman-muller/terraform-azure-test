@@ -11,7 +11,7 @@ override.tf.json
 *_override.tf.json
 
 # === Local environment files ===
-*.tfvars
+# *.tfvars
 *.tfvars.json
 # terraform.tfvars
 terraform.tfvars.json
