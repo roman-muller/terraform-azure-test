@@ -12,9 +12,9 @@ override.tf.json
 .terraform.lock.hcl
 
 # === Local environment files ===
-*.tfvars
+# *.tfvars
 *.tfvars.json
-terraform.tfvars
+# terraform.tfvars
 terraform.tfvars.json
 .env
 *.env
