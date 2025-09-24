@@ -3,6 +3,6 @@ output "resource_group_name" {
 }
 
 output "container_ip" {
-  value = azurerm_container_group.demo.ip_address
+  value       = azurerm_container_group.demo.ip_address
   description = "Public IP (or FQDN) assigned to the container group"
 }
