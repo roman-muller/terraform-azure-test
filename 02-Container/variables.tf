@@ -12,7 +12,7 @@ variable "oe" {
 variable "ritaid" {
   description = "Rita ID / lifecycle code"
   type        = string
-  default     = "d" # dev
+  default     = "terraform-demo"
 }
 
 variable "environment" {
