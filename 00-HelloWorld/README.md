@@ -1,11 +1,11 @@
 # 00 - HelloWorld (Local Providers Only)
 
 Purpose:
-Smallest Terraform example with no Azure resources (avoids org policies). Demonstrates variables, random provider, and writing a local file.
+Smallest Terraform example that writes a local file. Demonstrates basic Terraform workflow without Azure dependencies.
 
 Files:
 
-- main.tf: resources (random_string, local_file)
+- main.tf: declares a `local_file` resource that writes `hello.txt`.
 
 Workflow (PowerShell):
 
@@ -14,7 +14,7 @@ cd terraform-azure-test\00-HelloWorld
 terraform init
 terraform plan
 terraform apply -auto-approve
-type hello.txt
+
 terraform destroy -auto-approve
 ```
 
