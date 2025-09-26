@@ -1,30 +1,33 @@
 # 02 - Azure Container Instance (ACI) Demo
 
-Purpose:
-Create a tagged Resource Group plus a simple Azure Container Instance. Demonstrates:
+## Overview
 
-- Required tag compliance (oe, ritaid, environment)
+Provision a tagged resource group and a public Azure Container Instance (ACI). 
 
-Files:
+## Prerequisites
 
-- variables.tf: location, tags, image
-- main.tf: resource group + azurerm_container_group
-- outputs.tf: container FQDN / IP (if public)
+- Azure CLI authenticated (`az login`, `az account set --subscription <id>`)
+- Terraform ≥ 1.6
 
-Default image:
-Uses mcr.microsoft.com/azuredocs/aci-helloworld (stable + not rate limited).
-Switch to nginx:1.25-alpine only if Docker Hub access is allowed.
+## Files
 
-Common Commands (PowerShell):
+- `variables.tf` – location, tag inputs, container object
+- `main.tf` – resource group + `azurerm_container_group`
+- `outputs.tf` – container FQDN and IP (if public)
+
+## Usage (PowerShell)
+
 ```powershell
-
-# Enter a lab
 cd terraform-azure-test\02-Container
 terraform init
 terraform plan 
-terraform apply -auto-approve 
-terraform destroy -auto-approve 
+terraform apply -auto-approve
 ```
 
-Clean Up:
-Always terraform destroy per lab to avoid lingering cost.
+## Cleanup
+
+```powershell
+terraform destroy -auto-approve
+```
+
+Always destroy the lab resources to avoid cost.
